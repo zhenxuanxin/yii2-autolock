@@ -9,7 +9,7 @@
  * @license see MIT license for detail.
  */
 
-namespace zhenxxin\extension;
+namespace zhenxxin\autolock;
 
 use Yii;
 use yii\base\Module;
