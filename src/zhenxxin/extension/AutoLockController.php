@@ -4,7 +4,7 @@
  * AutoLockController class file.
  *
  * @author XuanXin Zhen <xuanxin.zhen@gmail.com>
- * @link https://github.com/zhenxxin/yii-auto-lock
+ * @link https://github.com/zhenxxin/yii2-auto-lock
  * @copyright 2017 by XuanXin Zhen <xuanxin.zhen@gmail.com>
  * @license see MIT license for detail.
  */

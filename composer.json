@@ -23,5 +23,10 @@
             "name": "XuanXin Zhen",
             "email": "xuanxin.zhen@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "zhenxxin\\extension\\": "src/"
+        }
+    }
 }
