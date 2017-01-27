@@ -1,0 +1,27 @@
+{
+    "name": "zhenxin/yii2-auto-lock",
+    "description": "Auto lock when processing console application.",
+    "keywords": [
+        "yii2",
+        "extension",
+        "flock"
+    ],
+    "type": "extension",
+    "require": {
+        "php": ">=5.4",
+        "yiisoft/yii2": "^2.0",
+        "yiisoft/yii2-composer": "^2.0"
+    },
+    "require-dev": {
+        "php": "^7.0",
+        "yiisoft/yii2-dev": "^2.0",
+        "yiisoft/yii2-composer": "^2.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "XuanXin Zhen",
+            "email": "xuanxin.zhen@gmail.com"
+        }
+    ]
+}
