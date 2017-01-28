@@ -114,11 +114,11 @@ class AutoLockController extends Controller
     public function beforeAction($action)
     {
         if (parent::beforeAction($action)) {
-            if (!$this->checkLockRequired($action)) {
+            if (!$this->checkLockRequired($action->id)) {
                 return true;
             }
 
-            return $this->lock($action);
+            return $this->lock($action->id);
         }
 
         return parent::beforeAction($action);
@@ -129,8 +129,8 @@ class AutoLockController extends Controller
      */
     public function afterAction($action, $result)
     {
-        if ($this->checkLockRequired($action)) {
-            return $this->unlock($action);
+        if ($this->checkLockRequired($action->id)) {
+            return $this->unlock($action->id);
         }
 
         return parent::afterAction($action, $result);
@@ -148,7 +148,7 @@ class AutoLockController extends Controller
             mkdir($dir);
         }
 
-        $filename = sprintf('%s/%s-%s.lock', $dir, $this->name, $action);
+        $filename = sprintf('%s/%s-%s.lock', $dir, $this->id, $action);
         $file = fopen($filename, 'c'); // 'c' 相对于 'w' 方式更适合于需要 咨询锁（advisory lock） 的情况
         if (!flock($file, $this->lockMode)) {
             return false;
